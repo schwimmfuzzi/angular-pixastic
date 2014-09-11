@@ -7,7 +7,7 @@
  * # helloWorld
  */
 angular.module('angularPixasticApp')
-  .directive('helloWorld', function ()
+  .directive('ngPixastic', function ()
   {
     return {
       	restrict: 'E',
@@ -17,7 +17,18 @@ angular.module('angularPixasticApp')
 		  apply: '&'
 		},
 		require: '^ngController',
-      	templateUrl: 'views/helloworld-template.html'
+      	templateUrl: 'views/completeTpl.html'
+	  };
+  })
+  .directive('ngPixasticSource', function ()
+  {
+    return {
+      	restrict: 'E',
+      	scope: {
+		  img: '='
+		},
+		require: '^ngController',
+      	templateUrl: 'views/sourceTpl.html'
 	  };
   })
   .directive('myCustomer', function() {

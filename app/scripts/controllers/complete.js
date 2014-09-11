@@ -8,7 +8,7 @@
  * Controller of the angularPixasticApp
  */
 angular.module('angularPixasticApp')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('CompleteCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -22,7 +22,7 @@ angular.module('angularPixasticApp')
 
     // $scope.mono = {name:'mono'};
     // $scope.mosaic = {name:'mosaic'};
-    $scope.filter = 'mono';
+    $scope.filter = 'mosaic';
 
     function doTest(test) {
         var img = document.getElementById('original-image'),
@@ -51,10 +51,10 @@ angular.module('angularPixasticApp')
             'mosaic':{
                 effect : 'mosaic',
                 options : {
-                    blockSize : 3
+                    blockSize : 5
                 }
             },
-            'mono':{
+            'desaturate':{
                 effect : 'desaturate'
             }
         };
