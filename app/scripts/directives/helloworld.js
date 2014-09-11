@@ -12,10 +12,12 @@ angular.module('angularPixasticApp')
     return {
       	restrict: 'E',
       	scope: {
-		  img: '=img'
+		  img: '=',
+		  filter:'@',
+		  apply: '&'
 		},
+		require: '^ngController',
       	templateUrl: 'views/helloworld-template.html'
-      	
 	  };
   })
   .directive('myCustomer', function() {

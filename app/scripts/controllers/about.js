@@ -16,9 +16,13 @@ angular.module('angularPixasticApp')
     ];
 
 
+    // declare different images
     $scope.mona = {file:'monalisa.jpg'};
     $scope.earth = {file:'earth.png'};
 
+    // $scope.mono = {name:'mono'};
+    // $scope.mosaic = {name:'mosaic'};
+    $scope.filter = 'mono';
 
     function doTest(test) {
         var img = document.getElementById('original-image'),
@@ -43,14 +47,19 @@ angular.module('angularPixasticApp')
 
     $scope.applyFilter = function()
     {
-        var mosaic =  {
+        var filter = {
+            'mosaic':{
                 effect : 'mosaic',
                 options : {
                     blockSize : 3
                 }
-            };
-        doTest(mosaic);
-    }
+            },
+            'mono':{
+                effect : 'desaturate'
+            }
+        };
+        doTest(filter[$scope.filter]);
+    };
 
 
   });

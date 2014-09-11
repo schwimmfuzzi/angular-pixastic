@@ -1,1 +1,14 @@
-<img  src="images/{{ img.file }}" id="original-image">
+<h2>Filter with:
+    <button type="button" class="btn btn-success" ng-click="apply()">{{filter}}</button>
+</h2>
+<img src="images/{{ img.file }}" id="original-image">
+<hr>
+<div class="row">
+
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <canvas id="output-canvas"></canvas>
+    </div>
+</div>
